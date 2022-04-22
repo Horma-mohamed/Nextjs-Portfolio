@@ -1,0 +1,41 @@
+$p:transparent;
+.navbar{
+    width: 100vw;
+    height: 80px;
+    background-color: $p;
+    display: flex;
+    .nav-btn{
+        width: 7px;
+        height:7px;
+        background-color: aliceblue;
+        border-radius: 50%;
+        position: relative;
+        
+
+        &::before{
+
+            content: '';
+            position: absolute;
+            width: 7px;
+            height:7px;
+            left: 0;
+            background-color: aliceblue;
+            border-radius: 50%;
+            transform: translateY(-13px);
+        }
+        &::after{
+            content: '';
+            position: absolute;
+            width: 7px;
+            height:7px;
+            left: 0;
+            background-color: aliceblue;
+            border-radius: 50%;
+            transform: translateY(-26px);
+        }
+    }
+    .link{
+        font-family:  'Lobster', cursive;
+    }
+}
+//w-2.5 h-2.5 my-1 rounded-full translat  bg-gray-100 relative before:absolute before:w-2.5 before:h-2.5 before:rounded-full before:bg-gray-100 before:translate-x-3.5 
