@@ -18,6 +18,12 @@
 # misc
 .DS_Store
 
+#some files
+
+projects/index.txt
+pages/posts.txt
+pages/test.js
+
 # debug
 npm-debug.log*
 yarn-debug.log*
