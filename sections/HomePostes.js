@@ -10,7 +10,8 @@ import readingTime from 'reading-time'
 import axios from 'axios'
 import {useInView} from 'react-intersection-observer'
 import { postsListUrl } from "../utils/constans"
-import Image from "next/image"
+//import Image from "next/image"
+import Image from '@chakra-ui/react'
 
 
  function Home({Data}){
@@ -48,7 +49,7 @@ import Image from "next/image"
                             </div>
                                     
                             <div className="w-full h-40 overflow-hidden relative ">
-                                <Image layout="fill" className="w-full h-full" src={post.thumb} alt={post.title} />
+                                <Image className="w-full h-full" src={post.thumb} alt={post.title} />
                             </div>
                             <div className="w-full p-4 space-y-4">
                             <i className="text-purple-600 dark:text-purple-300 font-sans ">{post.category.name}</i>
