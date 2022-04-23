@@ -180,7 +180,7 @@ export default function  NavBar({dark,setDark,}){
                                             }
                             </p>
                             <div className="flex space-x-4 absolute -bottom-4 ">
-                                <span className="text-gray-800 dark:text-gray-100"></span> <i className="text-yellow-600 underline underline-offset-1  "> {quote?.author}</i>
+                                <span className="text-gray-800 dark:text-gray-100"></span> <i className="text-yellow-600 underline underline-offset-1  "> <a href={`https://www.google.com/search?q=${quote?.author}`} target="_blank" rel="noopener noreferrer">{quote?.author}</a></i>
                             </div>
                         </div>
                         <div className="w-full flex justify-center">
@@ -195,8 +195,8 @@ export default function  NavBar({dark,setDark,}){
                         <div className="w-full flex justify-center translate-y-20 ">
                         <div  className="w- h-10 flex space-x-4 ">
                             <a href={socialP?.github.link} className="  "> <FaGithubAlt className='text-gray-700 text-4xl dark:text-gray-100' /></a>
-                            <a href={socialP?.youtube.link} className=""> <IoLogoLinkedin className='text-gray-700 text-4xl dark:text-gray-100' /></a>
-                            <a href={socialP?.linkedin.link} className=""> <IoLogoYoutube className='text-gray-700 text-4xl dark:text-gray-100' /></a>
+                            <a href={socialP?.linkedin.link} className=""> <IoLogoLinkedin className='text-gray-700 text-4xl dark:text-gray-100' /></a>
+                            <a href={socialP?.youtube.link} className=""> <IoLogoYoutube className='text-gray-700 text-4xl dark:text-gray-100' /></a>
                             <a href={socialP?.gmail.link} className=""> <MdOutlineMail className='text-gray-700 text-4xl dark:text-gray-100' /></a>
 
                         </div>

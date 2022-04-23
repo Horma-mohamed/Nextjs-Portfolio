@@ -41,8 +41,8 @@ import {Image} from '@chakra-ui/react'
                         <a>
                         <div   className=" post w-full flex justify-center max-h-84 ">
                             <div className="w-5/6 relative md:w-11/12 min-h-80 pb-2 rounded-md shadow-lg bg-gray-100 dark:bg-slate-700 overflow-hidden  " >
-                            <div className={post.featured ?"absolute z-20   top-5 right-5 flex justify-center md:justify-between items-center w-7 h-7 bg-gray-800 bg-opacity-50 rounded-full md:w-24  md:h-7 md:pr-2":'hidden'}> 
-                            <GiStarFormation className="text-amber-600 text-2xl " />
+                            <div className={post.featured ?"absolute z-20   top-5 right-5 flex justify-center md:justify-between items-center w-7 h-7 bg-gray-800 bg-opacity-20 p-1 rounded-full md:w-24  md:h-7 md:pr-2":'hidden'}> 
+                            <GiStarFormation className="text-yellow-600 text-2xl " />
                             <div className=" text-gray-400 hidden md:inline " >
                                 <p className=" text-md m-0.5 font-sans font-bold">Featured</p>
                             </div>
