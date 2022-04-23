@@ -47,14 +47,7 @@ export default function Home({dark,data,}) {
     context.setVisible(true)
     axios.get('https://horma-portfolio.herokuapp.com/social-accounts/').then((resp)=>resp.data).then(()=>setSocialAccount(data))
   },[])
-  function playAudio(){
-    if(isPlay){
-        audio.play()
-    }
-    else{
-      audio.pause()
-    }
-  }
+ 
   
   return (
     <div   className="home flex justify-center relative dark:bg-gray-800  " >

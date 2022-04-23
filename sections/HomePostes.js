@@ -10,19 +10,15 @@ import readingTime from 'reading-time'
 import axios from 'axios'
 import {useInView} from 'react-intersection-observer'
 import { postsListUrl } from "../utils/constans"
+import Image from "next/image"
 
- 
+
  function Home({Data}){
-    let Url = 'http://localhost:8000/posts/'
+    //let Url = 'http://localhost:8000/posts/'
     const container=useRef()
     const [ref,inView] = useInView()
     const  [data,setData]=useState(Data)
-    const [pageNum,setPageNum] = useState()
-    const [pageUrl,setPageUrl] = useState(Url)
-    let pagesCount = Math.floor(data.pages)
-    useEffect(()=>{
-        setPageNum(pageUrl.substring(Url.length -1,))
-    },[Url])
+   
     useEffect(async()=>{
         if(inView){
             gsap.timeline().from('.post',{x:-10,y:-10,opacity:0.3,duration:0.5,delay:0.2,stagger:0.3 })
@@ -51,8 +47,8 @@ import { postsListUrl } from "../utils/constans"
                             </div>
                             </div>
                                     
-                            <div className="w-full h-40 overflow-hidden ">
-                                <img className="w-full h-full" src={post.thumb} alt="" srcset="" />
+                            <div className="w-full h-40 overflow-hidden relative ">
+                                <Image layout="fill" className="w-full h-full" src={post.thumb} alt={post.title} />
                             </div>
                             <div className="w-full p-4 space-y-4">
                             <i className="text-purple-600 dark:text-purple-300 font-sans ">{post.category.name}</i>
@@ -92,11 +88,3 @@ import { postsListUrl } from "../utils/constans"
 
 export default Home
 
-async function getData(set,url){
-        const res = await fetch(url)
-        const data = await res.json()
-        set(data)
-        
-        
-
-}
