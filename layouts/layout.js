@@ -19,7 +19,7 @@ export default function({children}){
         <div className={ dark?`w-screen absolute top-0 dark dark:bg-gray-800 min-h-screen  overflow-x-hidden `:`w-screen absolute top-0 overflow-x-hidden `}>
         <div className=" w-full  relative">
         <NavBar dark={dark} setDark={setDark} navStatu={navStatu} setNavStatu={setNavStatu} />
-            <div>
+            <div className="w-full" >
                 {children}
             </div>
         <Footer/>

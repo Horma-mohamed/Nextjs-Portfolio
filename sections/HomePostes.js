@@ -11,7 +11,7 @@ import axios from 'axios'
 import {useInView} from 'react-intersection-observer'
 import { postsListUrl } from "../utils/constans"
 //import Image from "next/image"
-import Image from '@chakra-ui/react'
+import {Image} from '@chakra-ui/react'
 
 
  function Home({Data}){

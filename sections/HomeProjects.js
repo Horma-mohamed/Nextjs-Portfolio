@@ -4,6 +4,7 @@ import { BsArrowRight } from 'react-icons/bs'
 import array from "../functions/array"
 import useMouse from '../functions/useMouse'
 import Link from 'next/link'
+import { Image } from "@chakra-ui/react"
 export default function(){
     const pro = useRef()
     //const {x,y}= useMouse()
@@ -51,7 +52,7 @@ export default function(){
                            <a >
                            <div  className=" group relative w-full h-24 flex justify-center   bg-gray-00   ">
                             <div ref={pro}  className="  absolute right-14 overflow-hidden  duration-300  opacity-0 group-hover:opacity-100 w-40  bg-gray-400">
-                                    <img src={project.thumb} alt="img not found" srcset="" />
+                                    <Image src={project.thumb} alt="img not found"  />
                             </div>
                             <div className="w-5/6 relative space-y-2 ">
                             <h1 className="text-xl dark:text-gray-100 text-gray-800 ">
